@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Suspense } from "react";
+import Spinner from "./Components/atoms/Spinner";
+import ErrorBoundary from "./Components/molecules/ErrorBoundary";
+  import { router as routers } from "./Routes/route";
+import { useRoutes } from "react-router-dom";
 
 function App() {
+  const router = useRoutes(routers);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+       <Suspense fallback={<Spinner />}>
+        <ErrorBoundary>
+          {router}
+        </ErrorBoundary>
+      </Suspense>
+    </>
+
   );
 }
 
