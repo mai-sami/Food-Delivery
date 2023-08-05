@@ -5,7 +5,7 @@ import Spinner from "../Components/atoms/Spinner";
  
 export function BaseLayout() {
      return (
-        <div className="continer">
+        <div className="continer h-auto flex flex-col bg-primary">
             <Header />
                  <Suspense fallback={<Spinner />}>
                 <Outlet />

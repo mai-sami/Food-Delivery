@@ -12,7 +12,7 @@ class ErrorBoundary extends PureComponent {
     console.log(error, errorInfo);
   }
   render() {
-    if (this.state.hasError) return <>obs</>;
+    if (this.state.hasError) return <>obs Noooooooooooooooooo</>;
     return this.props.children;
   }
 }

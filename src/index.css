@@ -16,6 +16,9 @@ html,
 body {
   scroll-behavior: smooth;
   overflow-x: hidden;
+     --tw-bg-opacity: 1;
+    background-color: rgb(245 243 243 / var(--tw-bg-opacity));
+
 }
 
 .continer{
